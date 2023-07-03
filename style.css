@@ -1,33 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 .slider{
-    width: 1300px;
+    width: 100vw;
     max-width: 100vw;
-    height: 700px;
+    height: 653px;
     margin: auto;
     position: relative;
     overflow: hidden;
+    background-color: blue;
 }
 .slider .list{
     position: absolute;
-    width: max-content;
-    height: 100%;
+    width: 100%;
+    height: 100vh;
     left: 0;
     top: 0;
     display: flex;
     transition: 1s;
+    background-color: red;
 }
 .slider .list img{
-    width: 1300px;
+    width: 100vw;
     max-width: 100vw;
-    height: 100%;
-    object-fit: cover;
+    height: 653px;
+    object-fit:fill;
 }
 .slider .buttons{
     position: absolute;
     top: 45%;
-    left: 5%;
-    width: 90%;
+    left: 2%;
+    width: 95%;
     display: flex;
     justify-content: space-between;
+
+
 }
 .slider .buttons button{
     width: 50px;
@@ -56,14 +67,46 @@
     height: 10px;
     background-color: #fff;
     margin: 10px;
-    border-radius: 20px;
     transition: 0.5s;
 }
 .slider .dots li.active{
     width: 30px;
+    background-color: #F2CA80;
 }
 @media screen and (max-width: 768px){
     .slider{
-        height: 400px;
+        height: 200px;
+    }
+
+    .slider{
+        width: 100vw;
+        max-width: 100vw;
+        height: 200px;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+        margin-top: 20px;
+        background-color: blue;
+    }
+
+    .slider .list img{
+        width: 100vw;
+        max-width: 100vw;
+        height: 200px;
+        object-fit:fill;
+    }
+
+    .slider .buttons{
+        position: absolute;
+        top: 40%;
+        left: 2%;
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .slider .buttons img{
+        width: 45px;
+        height: 45px;
     }
 }
